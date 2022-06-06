@@ -41,6 +41,7 @@ async function run() {
       const result = await carPartsCollection.find(query).toArray();
       res.send(result)
     })
+    //add
     app.post('/parts', verifyToken, async (req, res) => {
       const parts = req.body
       const result = await carPartsCollection.insertOne(parts)
